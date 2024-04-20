@@ -1,0 +1,52 @@
+public class Methodoverloading_inheritance {
+
+	public static void main(String[] args) {
+		square s=new square();
+		s.area(10,20);
+		s.area(4.56);
+		s.area(5);
+	}
+
+}
+
+//Multi-Level Inheritance
+
+class rectangle //superclass
+{
+	int length, breadth;
+	rectangle()
+	{
+		length=5;
+		breadth=4;
+	}
+	void area(int l, int b)
+	{
+		System.out.println("Area of rectangle: "+(l*b));
+	}
+}
+class circledem extends rectangle //subclass1 which is acting as superclass
+{
+	double radius;
+	circledem()
+	{
+		radius=2.5;
+	}
+	void area(double r)
+	{
+		radius=r;
+		System.out.println("Area of circle: "+(3.14*radius*radius));
+	}
+}
+class square extends circledem // subclass2
+{
+	int side;
+	square()
+	{
+		side=2;
+	}
+	void area(int s)
+	{
+		side=s;
+		System.out.println("Area of square: "+(side*side));
+	}
+}
