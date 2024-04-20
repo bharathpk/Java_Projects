@@ -1,7 +1,14 @@
 public class Methodoverloading_inheritance {
 
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
 		square s=new square();
+		System.out.println("Enter the length and breadth of the rectangle:");
+		int length=sc.nextInt(), bredth=sc.nextInt();
+		System.out.println("Enter the radius of the circle:");
+		int length=sc.nextInt();
+		System.out.println("Enter the side of the square:");
+		int length=sc.nextInt()
 		s.area(10,20);
 		s.area(4.56);
 		s.area(5);
