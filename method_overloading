@@ -1,10 +1,17 @@
 public class Methodoverloading_inheritance {
 
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
 		square s=new square();
-		s.area(10,20);
-		s.area(4.56);
-		s.area(5);
+		System.out.println("Enter the length and breadth of the rectangle:");
+		int length=sc.nextInt(), bredth=sc.nextInt();
+		System.out.println("Enter the radius of the circle:");
+		long radius=sc.nextLong();
+		System.out.println("Enter the side of the square:");
+		int side=sc.nextInt()
+		s.area(length,bredth);
+		s.area(radius);
+		s.area(side);
 	}
 
 }
@@ -14,7 +21,7 @@ public class Methodoverloading_inheritance {
 class rectangle //superclass
 {
 	int length, breadth;
-	rectangle()
+	rectangle()//constructor with default values
 	{
 		length=5;
 		breadth=4;
@@ -27,7 +34,7 @@ class rectangle //superclass
 class circledem extends rectangle //subclass1 which is acting as superclass
 {
 	double radius;
-	circledem()
+	circledem()//constructor with default values
 	{
 		radius=2.5;
 	}
@@ -40,7 +47,7 @@ class circledem extends rectangle //subclass1 which is acting as superclass
 class square extends circledem // subclass2
 {
 	int side;
-	square()
+	square()//constructor with default values
 	{
 		side=2;
 	}
