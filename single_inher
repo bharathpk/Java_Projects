@@ -1,0 +1,39 @@
+public class Singlelevel_inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		manager ob=new manager();
+		ob.display();
+		ob.output();
+	}
+
+}
+
+class employee
+{
+	int eid;
+	String name;
+	employee()
+	{
+		eid=101;
+		name="xyz";
+	}
+	void display()
+	{
+		System.out.println("Employee ID: "+eid);
+		System.out.println("Employee Name: "+name);
+	}
+}
+
+class manager extends employee
+{
+	int salary;
+	manager()
+	{
+		salary=78000;
+	}
+	void output()
+	{
+		System.out.println("Manager Salary: "+salary);
+	}
+}
