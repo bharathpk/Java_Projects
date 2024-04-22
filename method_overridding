@@ -1,0 +1,57 @@
+public class Methodoverriding1_inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		shapedemo1 s; // superclass reference variable
+		rectangledemo1 r=new rectangledemo1(5,4);
+		circled1 c=new circled1(5);
+		s=r; // store the object of subclass in a superclass reference variable
+		s.area(); // it calls the overridden method (area()) of subclass rectangledemo1
+		s=c; // store the object of subclass in a superclass reference variable
+		s.area(); // it calls the overridden method (area()) of subclass circled1
+		//one interface s.area(), multiple method definitions
+		//run-time polymorphism
+	}
+
+}
+
+
+//Hierarchical Inheritance
+
+class shapedemo1 // superclass
+{
+	void area() // area method with no parameters
+	{
+		System.out.println("Area is undefined for class shapedemo");
+	}
+}
+
+class rectangledemo1 extends shapedemo1 // subclass extends superclass (shapedemo)
+{
+	int length, breadth;
+	
+	rectangledemo1(int length, int breadth)
+	{
+		this.length=length;
+		this.breadth=breadth;
+	}
+	void area() // overriding the method of superclass area()
+	{
+		System.out.println("Area of rectancle: "+(length*breadth));
+	}
+}
+
+class circled1 extends shapedemo1 // subclass extends superclass (shapedemo)
+{
+	int radius;
+	circled1(int radius)
+	{
+		this.radius=radius;
+	}
+	void area() // overriding the method of superclass area()
+	{
+		final double PI=3.14;
+		//PI=3.1414;
+		System.out.println("Area of Circle: "+(PI*radius*radius));
+	}
+}
